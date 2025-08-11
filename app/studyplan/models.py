@@ -4,7 +4,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 from app.database import Base
 
-class StudyPlan(Base):
+class StudyPlanModel(Base):
     __tablename__ = "study_plans"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), index=True, primary_key=True, default=uuid.uuid4)
