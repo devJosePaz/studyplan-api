@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from app.studyplan.models import StudyPlanModel
-import app.studyplan.schemas
+from app.studyplan import schemas
 from app.config.database import get_async_session
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select

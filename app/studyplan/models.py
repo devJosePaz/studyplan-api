@@ -1,8 +1,8 @@
 import uuid
-from sqlalchemy import String, ForeignKey
+from sqlalchemy import String, ForeignKey, Integer
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database import Base
+from app.config.database import Base
 
 class StudyPlanModel(Base):
     __tablename__ = "study_plans"

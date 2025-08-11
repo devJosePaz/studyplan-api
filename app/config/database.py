@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sess
 from app.config.settings import settings
 from sqlalchemy.orm import declarative_base
 
-DATABASE_URL = settings.POSTGRES_DB
+DATABASE_URL = settings.POSTGRES_URL
 
 engine = create_async_engine(DATABASE_URL, echo=False)
 
