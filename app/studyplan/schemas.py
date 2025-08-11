@@ -9,7 +9,6 @@ class StudyPlanCreate(BaseModel):
 
 class StudyPlanResponse(StudyPlanCreate):
     id: UUID
-    owner_id: UUID
 
     class Config:
         from_attributes = True
