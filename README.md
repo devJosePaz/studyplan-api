@@ -10,7 +10,7 @@ Facilitar a criação de planos de estudo adaptados ao estilo de aprendizado, te
 
 Esta API está sendo desenvolvida para implementação no backend do meu Trabalho de Conclusão de Curso (TCC):  
 **SAAI (Sistema de Aprendizado Adaptativo e Inclusivo)**, que está disponível no repositório:  
-[https://github.com/devJosePaz/Projeto-SAAI](https://github.com/devJosePaz/Projeto-SAAI)
+https://github.com/devJosePaz/adaptive-learning-system
 
 ## Status do Projeto
 
