@@ -27,4 +27,16 @@ async def create_profile(
 
     return new_profile
 
+@router.get("/profiles", response_model=List[schemas.ProfileResponse], status_code=status.HTTP_200_OK)
+async def list_profiles(
+    db: AsyncSession = Depends(get_async_session)
+):
+    result = await db.execute(select(ProfileModel))
+    profiles = result.scalars().all()
+
+    return profiles
+
+    
+
+    
 
