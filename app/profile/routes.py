@@ -36,7 +36,3 @@ async def list_profiles(
 
     return profiles
 
-    
-
-    
-

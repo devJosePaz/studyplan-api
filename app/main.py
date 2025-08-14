@@ -6,6 +6,7 @@ from app.config.database import engine, Base
 app = FastAPI()
 
 app.include_router(study_plan_route)
+app.include_router(profile_route)
 
 @app.on_event("startup")
 async def on_startup():
