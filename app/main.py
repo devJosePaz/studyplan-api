@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.studyplan.routes import router as study_plan_route
+from app.profile.routes import router as profile_route
 from app.config.database import engine, Base
 
 app = FastAPI()
