@@ -11,7 +11,7 @@ class ProfileModel(Base):
     study_method: Mapped[str] = mapped_column(String(50), nullable=False)
     study_daily_time: Mapped[int] = mapped_column(Integer, nullable=False)
     study_frequence: Mapped[str] = mapped_column(String, nullable=False)
-    main_motivation: Mappe[str] = mapped_column(String(80), nullable=False)
+    main_motivation: Mapped[str] = mapped_column(String(80), nullable=False)
 
     create_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow)
     update_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
