@@ -1,5 +1,5 @@
 from sqlalchemy import String, DateTime
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.dialects.postgresql import UUID
 from app.config.database import Base
 import uuid
@@ -18,4 +18,3 @@ class UserModel(Base):
     update_at: Mapped[datetime]= mapped_column(DateTime, nullable=False, default=datetime.datetime, onupdate=datetime.datetime.utcnow)
 
     profile: Mapped["ProfileModel"] = relationship(back_populates="user", uselist=False)
-    
