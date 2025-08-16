@@ -19,5 +19,3 @@ class StudyPlanModel(Base):
     user: Mapped["UserModel"] = relationship(back_populates="study_plans")
 
 
-    
-
