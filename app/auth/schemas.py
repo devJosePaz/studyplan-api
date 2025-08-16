@@ -3,11 +3,13 @@ from uuid import UUID
 import datetime
 
 class UserCreate(BaseModel):
+    name:
     email: str
     hashed_password: str
 
 class UserResponse(BaseModel):
     id: UUID
+    name: str
     email: str
     hashed_password: str
     create_at: datetime
