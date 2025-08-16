@@ -16,8 +16,7 @@ class ProfileModel(Base):
     create_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow)
     update_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    user: Mapped["UserModel"] = relationship(back_populates="profile")
-    
+    user: Mapped["UserModel"] = relationship(back_populates="profiles")
     
 
 
