@@ -3,7 +3,7 @@ from uuid import UUID
 import datetime
 
 class UserCreate(BaseModel):
-    name:
+    name: str
     email: str
     hashed_password: str
 
