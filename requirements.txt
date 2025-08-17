@@ -8,6 +8,7 @@ fastapi==0.116.1
 greenlet==3.2.4
 h11==0.16.0
 idna==3.10
+passlib==1.7.4
 pydantic==2.11.7
 pydantic-settings==2.10.1
 pydantic_core==2.33.2
