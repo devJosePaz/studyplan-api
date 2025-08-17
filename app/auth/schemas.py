@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from uuid import UUID
-import datetime
+from datetime import datetime
 
 class UserCreate(BaseModel):
     name: str
