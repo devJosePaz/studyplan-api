@@ -32,7 +32,7 @@ async def register(
 
     return new_user
 
-@router.post("/login", response_model=schemas.UserResponse, status_code=status.HTTP_202_ACCEPTED)
+@router.post("/login", response_model=schemas.TokenResponse, status_code=status.HTTP_202_ACCEPTED)
 async def login(
     user_data: schemas.UserCreate,
     db: AsyncSession = Depends(get_async_session)
