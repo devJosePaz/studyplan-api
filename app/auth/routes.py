@@ -44,7 +44,7 @@ async def login(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="error: user not found.")
 
     if not passw_utils.verify_password(user_data.hashed_password, user.hashed_password):
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="error: incorrect passwqord.")
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="error: incorrect password.")
 
     token = jwt_utils.create_access_token(data={"sub": user.email})
     
