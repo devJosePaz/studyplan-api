@@ -9,10 +9,10 @@ class StudyPlanModel(Base):
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), index=True, primary_key=True, default=uuid.uuid4)
     user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=False)
-    theme: Mapped[str] = mapped_column(String(80), nullable=False)
-    theme_level: Mapped[str] = mapped_column(String(80), nullable=False) # nivel de conhecimento no tema (iniciante, intermediário, avançado)
-    daily_time: Mapped[int] = mapped_column(Integer, nullable=False) # tempo para concluir o plano de forma logica
-    objective: Mapped[str] = mapped_column(String(80), nullable=False)
+    theme: Mapped[str] = mapped_column(String(80), nullable=False) # tema de estudo
+    theme_level: Mapped[str] = mapped_column(String(80), nullable=False) # iniciante, intermediário, avançado
+    week_time: Mapped[int] = mapped_column(Integer, nullable=False) # hora por semana (mostra o ritmo)
+    objective: Mapped[str] = mapped_column(String(80), nullable=False) # aprimoramento, revisão, certificação, projeto, competição
     
     create_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow)
 
