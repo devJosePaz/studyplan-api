@@ -3,14 +3,21 @@ from uuid import UUID
 from datetime import datetime
 
 class ProfileCreate(BaseModel):
-    study_method: str
-    main_motivation: str
-
+    user_id: UUID
+    learning_style: str
+    challenge_tolerance: str
+    focus: str
+    study_resilience: str
+    
 
 class ProfileResponse(BaseModel):
     id: UUID
-    study_method: str
-    main_motivation: str
+    user_id: UUID
+    learning_style: str
+    challenge_tolerance: str
+    focus: str
+    study_resilience: str
+    
     create_at: datetime
     update_at: datetime
 
