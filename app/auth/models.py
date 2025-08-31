@@ -15,9 +15,9 @@ class UserModel(Base):
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
 
     create_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow)
-    update_at: Mapped[datetime]= mapped_column(DateTime, nullable=False, default=datetime.datetime, onupdate=datetime.datetime.utcnow)
+    update_at: Mapped[datetime]= mapped_column(DateTime, nullable=False, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    profile: Mapped["ProfileModel"] = relationship(back_populates="users", uselist=False)
+    profile: Mapped["ProfileModel"] = relationship(back_populates="user", uselist=False)
 
 
 
