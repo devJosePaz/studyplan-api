@@ -5,20 +5,13 @@ from uuid import UUID
 from datetime import datetime
 
 
-# ===== Enums (valores fechados, fáceis de validar e de usar na árvore) =====
+# ===== Enums =====
 
-class StyleEnum(str, Enum):
+class LearningStyleEnum(str, Enum):
     teorico = "teorico"
     pratico = "pratico"
     balanceado = "balanceado"
     intensivo = "intensivo"
-
-
-class LearningStyleEnum(str, Enum):
-    visual = "visual"
-    auditivo = "auditivo"
-    leitura = "leitura"
-    cinestesico = "cinestesico"
 
 
 class ChallengeToleranceEnum(str, Enum):
@@ -28,7 +21,6 @@ class ChallengeToleranceEnum(str, Enum):
 
 
 class FocusEnum(str, Enum):
-    # janela de atenção
     curto = "curto"     # ~25min base
     medio = "medio"     # ~50min base
     longo = "longo"     # ~75min base
@@ -44,8 +36,7 @@ class StudyResilienceEnum(str, Enum):
 
 class ProfileCreate(BaseModel):
     user_id: UUID
-    style: StyleEnum                          # T/P/B/I no perfil do usuário
-    learning_style: LearningStyleEnum         # VARK (preferência)
+    learning_style: LearningStyleEnum                # T/P/B/I (fixa o tipo de plano do usuário)
     challenge_tolerance: ChallengeToleranceEnum
     focus: FocusEnum
     study_resilience: StudyResilienceEnum
@@ -54,7 +45,6 @@ class ProfileCreate(BaseModel):
 class ProfileResponse(BaseModel):
     id: UUID
     user_id: UUID
-    style: StyleEnum
     learning_style: LearningStyleEnum
     challenge_tolerance: ChallengeToleranceEnum
     focus: FocusEnum
